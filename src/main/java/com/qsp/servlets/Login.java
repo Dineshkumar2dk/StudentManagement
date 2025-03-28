@@ -25,14 +25,14 @@ public class Login extends HttpServlet{
 		Student_DAO s=new Student_DAO();
 		try {
 			Boolean option=s.FindAdmin(Email,Password);
-			if(Email=="Admin@gmail.com"&& Password=="Admin")
+			if(option)
 			{
 				req.setAttribute("message", "login succesful");
 				req.getRequestDispatcher("Adminhome.jsp").include(req, resp);
 			}
 			else
 			{
-				req.setAttribute("message", "login Failure....");
+				req.setAttribute("message", "fail");
 				req.getRequestDispatcher("Adminlogin.jsp").include(req, resp);
 			}
 			

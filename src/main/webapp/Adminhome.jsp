@@ -6,9 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-tbody,thead
+table
 {
-border:1px solid black;
 border-style: collpase;
 }
 </style>
@@ -16,7 +15,7 @@ border-style: collpase;
 
 <body>
 	<h1>Student Details</h1>
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 			<td>ID</td>

@@ -1,0 +1,60 @@
+package com.qsp.DTO;
+
+public class Admin_DTO
+{
+	 
+	private int Id;
+	  private String Name;
+	  private Long Contact;
+	  private String Email;
+	  private String password;
+	
+	  public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public Long getContact() {
+		return Contact;
+	}
+
+	public void setContact(Long contact) {
+		Contact = contact;
+	}
+
+	public String getEmail() {
+		return Email;
+	}
+
+	public void setEmail(String email) {
+		Email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Admin_DTO(int id, String name, Long contact, String email, String password) {
+			super();
+			Id = id;
+			Name = name;
+			Contact = contact;
+			Email = email;
+			this.password = password;
+		}
+}

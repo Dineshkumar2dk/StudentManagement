@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>ADMIN LOGIN PAGE</h1>
- <form action="Adminhome.jsp" method="post">
+ <form action="adminlogin" method="post">
  
   <table>
     <tr>
@@ -25,5 +25,13 @@
   <p>Not a user....?</p>
   <a href="Adminsignup.jsp">SignUp</a>
    </form>
+   <% String message=(String )request.getParameter("message"); %>
+   <%if(message=="fail"){ %>
+   <script type="text/javascript">
+   alert("invalid username and password")
+   </script>
+   <%} %>
+   
+   
 </body>
 </html>

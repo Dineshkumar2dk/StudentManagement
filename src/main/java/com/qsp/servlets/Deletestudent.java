@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.qsp.DAO.Student_DAO;
 
 @WebServlet("/deletestudent")
-public class Deletdstudent extends HttpServlet{
+public class Deletestudent extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

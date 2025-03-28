@@ -25,18 +25,18 @@ public class Addstudent extends HttpServlet{
 		Double chemistry=Double.parseDouble(req.getParameter("che"));
 		Double maths=Double.parseDouble(req.getParameter("mat"));
 		
-		Student_DAO s=new Student_DAO();
+		
 		try {
-			int a=s.Addstudent(id, name, physics, chemistry, maths);
+			int a=Student_DAO.Addstudent(id, name, physics, chemistry, maths);
 			if(a==1)
 			{
 				req.setAttribute("message", "student details added successfully....");
-				req.getRequestDispatcher("adminhome.jsp").include(req, resp);
+				req.getRequestDispatcher("Adminhome.jsp").include(req, resp);
 			}
 			else
 			{
 				req.setAttribute("message", "student not added .....");
-				req.getRequestDispatcher("addstudent.jsp").include(req, resp);
+				req.getRequestDispatcher("Addstudent.jsp").include(req, resp);
 				
 			}
 		} catch (ClassNotFoundException | SQLException e) {

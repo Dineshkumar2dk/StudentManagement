@@ -9,7 +9,7 @@
 <body>
 <div>
    <h2>ADD STUDENT</h2>
-  <form action="addstudentservlet" method="get">
+  <form action="addstudent" method="get">
  
   <table>
     <tr>

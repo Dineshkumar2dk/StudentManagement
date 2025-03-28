@@ -24,10 +24,12 @@ public class Signup extends HttpServlet{
 		Long contact=Long.parseLong(req.getParameter("contact"));
 		String Email=req.getParameter("email");
 		String Password=req.getParameter("password");
+		String Rpassword=req.getParameter("rpassword");
 		
-		Student_DAO s=new Student_DAO();
+		
 		try {
-			int a=s.SaveAdmin(id, name, contact, Email, Password);
+			
+			int a=Student_DAO.SaveAdmin(id, name, contact, Email, Password,Rpassword);
 			if(a==1)
 			{
 				

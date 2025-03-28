@@ -14,7 +14,7 @@ public class Student_DAO {
 	public static Connection getConnection() throws ClassNotFoundException, SQLException
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql:///office");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/office","root","root");
 		return con;
 	}
 	public  static int Addstudent(int id,String name,Double physics,Double chemistry,Double maths) throws ClassNotFoundException, SQLException
@@ -65,15 +65,16 @@ public class Student_DAO {
 		}
 		return null;
 	}
-	public  static int SaveAdmin(int id,String name,Long contact,String email,String password) throws ClassNotFoundException, SQLException
+	public static int SaveAdmin(int id,String name,Long contact,String email,String password,String rpassword) throws ClassNotFoundException, SQLException
 	{
 		Connection con=getConnection();
-		PreparedStatement pt=con.prepareStatement("insert into admin values(?,?,?,?,?)");
+		PreparedStatement pt=con.prepareStatement("insert into admin values(?,?,?,?,?,?)");
 		pt.setInt(1, id);
 		pt.setString(2, name);
 		pt.setDouble(3, contact);
 		pt.setString(4, email);
 		pt.setString(5, password);
+		pt.setString(6, rpassword);
 		int a=pt.executeUpdate();
 		return a;
 	}

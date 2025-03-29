@@ -34,7 +34,7 @@ public class Addstudent extends HttpServlet{
 				req.getRequestDispatcher("Adminhome.jsp").include(req, resp);
 			}
 			else
-			{
+			{ 
 				req.setAttribute("message", "student not added .....");
 				req.getRequestDispatcher("Addstudent.jsp").include(req, resp);
 				

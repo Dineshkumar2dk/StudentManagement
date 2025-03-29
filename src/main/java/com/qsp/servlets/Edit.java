@@ -10,29 +10,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.qsp.DAO.Student_DAO;
+import com.qsp.DTO.Student_DTO;
 
-@WebServlet("/deleteservlet")
-public class Deletestudent extends HttpServlet{
+@WebServlet("/editservlet")
+public class Edit extends HttpServlet{
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		int id=Integer.parseInt(req.getParameter("id"));
 		
-		
 		try {
-			
-			int a=Student_DAO.DeleteStudent(id);
-			if(a==1)
+			Student_DTO s=Student_DAO.FindStudent(id);
+			if(s!=null)
 			{
-				req.setAttribute("message", a+"data has been deleted");
-				req.getRequestDispatcher("Adminhome.jsp").include(req, resp);;
-			}
-			else
-			{ 
-				req.setAttribute("message", "no data deleted");
-				req.getRequestDispatcher("Adminhome.jsp").include(req, resp);;
-				
+				req.setAttribute("student", s);
+				req.getRequestDispatcher("Edit.jsp").include(req, resp);
 			}
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

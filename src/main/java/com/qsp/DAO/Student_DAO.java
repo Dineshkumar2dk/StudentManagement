@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.mysql.cj.protocol.Resultset;
 import com.qsp.DTO.Student_DTO;
@@ -53,17 +54,18 @@ public class Student_DAO {
 			return null;
 		}
 	}
-	public static Student_DTO FindAllStudent() throws ClassNotFoundException, SQLException
+	public static ArrayList<Student_DTO> FindAllStudent() throws ClassNotFoundException, SQLException
 	{
 		Connection con=getConnection();
 		PreparedStatement pt=con.prepareStatement("select * from student ");
 		ResultSet rs=pt.executeQuery();
+		ArrayList<Student_DTO>  al=new ArrayList<Student_DTO>();
+		
 		while(rs.next())
 		{
-			Student_DTO s=new Student_DTO(rs.getInt(1),rs.getString(2),rs.getDouble(3),rs.getDouble(4),rs.getDouble(5));
-			return s; 
+			al.add(new Student_DTO( rs.getInt(1),rs.getString(2),rs.getDouble(3),rs.getDouble(4),rs.getDouble(5)));
 		}
-		return null;
+		return al;
 	}
 	public static int SaveAdmin(int id,String name,Long contact,String email,String password,String rpassword) throws ClassNotFoundException, SQLException
 	{
@@ -94,6 +96,27 @@ public class Student_DAO {
 			return false;
 		}
 		
+	
+	}
+	public static int Updatestudent(int id,String name,Double physics,Double chemistry,Double maths)
+	{
+		try {
+			Connection con=getConnection();
+			PreparedStatement pt=con.prepareStatement("update student set name=?,physics=?,chemistry=?,maths=? where id=?");
+			pt.setString(1, name);
+			pt.setDouble(2, physics);
+			pt.setDouble(3, chemistry);
+			pt.setDouble(4,maths);
+			pt.setInt(5,id);
+			
+			int a=pt.executeUpdate();
+			return a;
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
 	}
 	
 	

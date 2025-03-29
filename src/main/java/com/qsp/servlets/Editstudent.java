@@ -18,6 +18,8 @@ public class Editstudent extends HttpServlet{
 		
 		int id=Integer.parseInt(req.getParameter("id"));
 		
+		
+		
 	}
 
 }

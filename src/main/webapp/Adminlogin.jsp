@@ -32,6 +32,7 @@
             font-size: 24px;
             color: #fff;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px aqua;
         }
 
         
@@ -46,6 +47,7 @@
             font-size: 14px;
             display: block;
             margin-bottom: 5px;
+            text-shadow: 2px 2px 4px  aqua;
         }
 
         input {
@@ -78,6 +80,7 @@
             border-radius: 5px;
             margin-top: 10px;
             transition: all 0.3s ease-in-out;
+            text-shadow: 2px 2px 4px  aqua;
         }
 
         .btn:hover {
@@ -90,6 +93,7 @@
             margin-top: 15px;
             font-size: 14px;
             color: white;
+            
         }
 
         a {
@@ -140,7 +144,7 @@
 <body>
 
     <div class="login-container">
-        <h1>ADMIN LOGIN</h1>
+        <h1>Admin Login Page</h1>
         <form action="adminlogin" method="post">
             <div class="input-group">
                 <label for="email">EMAIL:</label>

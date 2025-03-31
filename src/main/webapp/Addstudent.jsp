@@ -19,7 +19,7 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.2);
+            background: #254988;
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -30,6 +30,7 @@
         h2 {
             margin-bottom: 10px;
             text-align: center;
+            text-shadow: 2px 2px 4px aqua;
         }
 
         table {
@@ -76,7 +77,7 @@
 <body>
 
     <div class="container">
-        <h2>ADD STUDENT</h2>
+        <h2>Add Student Detalis</h2>
         <form action="addstudent" method="get">
             <table>
                 <tr>

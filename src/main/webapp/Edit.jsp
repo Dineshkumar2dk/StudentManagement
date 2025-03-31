@@ -32,7 +32,7 @@
         h2 {
             margin-bottom: 20px;
             text-align: center;
-            text-shadow: 0px 0px 8px 8px lightblue;
+            text-shadow: 2px 2px 8px  aqua;
         }
 
         table {
@@ -42,6 +42,7 @@
         label {
             font-size: 16px;
             font-weight: bold;
+            text-shadow: 2px 2px 8px  aqua;
         }
 
         input {
@@ -68,6 +69,7 @@
             cursor: pointer;
             transition: 0.3s;
             margin-left: 120px;
+            text-shadow: 2px 2px 8px  aqua;
         }
 
         button:hover {
@@ -80,7 +82,7 @@
     <div class="container">
         <% Student_DTO st = (Student_DTO) request.getAttribute("student"); %>
 
-        <h2>UPDATE STUDENT DETAILS</h2>
+        <h2>Update Student Details</h2>
         
         <form action="updatestudent" method="get">
             <table>

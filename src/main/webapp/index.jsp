@@ -27,6 +27,10 @@
             margin-bottom: 30px;
             letter-spacing: 2px;
             animation: slideIn 1s ease-in-out;
+            text-shadow: 2px 2px 4px  aqua;
+       
+            
+           
         }
 
         .btn {

@@ -22,6 +22,7 @@
             font-size: 24px;
             color: #fff;
             margin-bottom: 20px;
+           text-shadow: 2px 2px 4px aqua;
         }
 
         
@@ -122,7 +123,7 @@
     </tr> 
     <tr>
     <td><label for="repass">RE-PASSWORD:</label></td>
-    <td><input type="text" id="repass" name="rpassword" onmouseout="passcheck()"> </td>
+    <td><input type="text" id="repass" name="rpassword" onmouseleave="passcheck()"> </td>
     </tr> 
   </table>
   <button onclick="check()">SUBMIT</button>
@@ -137,11 +138,13 @@
     		  let repass=document.getElementById("repass")
     		  alert("incorrect password")
     		  repass.style.border="3px solid red"
+    		  repass.style.boxShadow="2px 2px 2px 2px red"
     		 }
     	 else if(a==b)
     		 {
    		      let repass=document.getElementById("repass")
    		      repass.style.border="3px solid green"
+   		      repass.style.boxShadow="2px 2px 2px 2px green"
     		 }
     	 else
     		 {

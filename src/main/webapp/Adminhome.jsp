@@ -25,6 +25,7 @@
             font-size: 28px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px aqua;
         }
 
         table {
@@ -111,7 +112,7 @@
 </head>
 
 <body>
-    <h1>Student Details</h1>
+    <h1>Student Details List</h1>
     <table>
         <thead>
             <tr>
@@ -134,8 +135,8 @@
                         <td><%= se.getPhysics() %></td>
                         <td><%= se.getChemistry() %></td>
                         <td><%= se.getMaths() %></td>
-                        <td><a href="javascript:void(0);" class="edit" onclick="Edit(<%= se.getId() %>)">Edit </a><i id="edit-icon" class="fa-solid fa-user-pen"></i></td>
-                        <td><a href="javascript:void(0);" class="delete" onclick="Delete(<%= se.getId() %>)">Delete</a><i id="del-icon" class="fa-solid fa-trash"></i></td>
+                        <td><a href="#" class="edit" onclick="Edit(<%= se.getId() %>)">Edit </a><i id="edit-icon" class="fa-solid fa-user-pen"></i></td>
+                        <td><a href="#" class="delete" onclick="Delete(<%= se.getId() %>)">Delete</a><i id="del-icon" class="fa-solid fa-trash"></i></td>
                     </tr>
                 <% } %>
             <% } %>
@@ -144,7 +145,7 @@
 
     <div class="button-container">
         <a href="Addstudent.jsp" class="add">ADD STUDENT</a>
-        <a href="index.html" class="logout">LOGOUT</a>
+        <a href="index.jsp" class="logout">LOGOUT</a>
     </div>
 
     <script>
